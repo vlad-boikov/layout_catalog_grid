@@ -1,6 +1,6 @@
 .catalog {
   display: grid;
-  grid-template-columns: repeat(auto-fit, $card-size);
+  grid-template-columns: 200px;
   gap: $gap-size;
   justify-content: center;
 
@@ -8,18 +8,13 @@
   margin: 0 auto;
 
   &__card {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    place-items: center;
     height: 300px;
     border: 1px solid #ccc;
     border-radius: 5px;
   }
   
-  @media (max-width:488px) {
-    grid-template-columns: $card-size;
-  }
-
   @media (min-width:488px) {
     grid-template-columns: repeat(2, $card-size);
   }
